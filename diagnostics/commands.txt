@@ -1,0 +1,22 @@
+Read-only phone commands executed
+==================================
+
+  adb -s SERIAL get-state
+  adb -s SERIAL devices -l
+  adb -s SERIAL shell getprop ...
+  adb -s SERIAL shell id
+  adb -s SERIAL shell pm list features
+  adb -s SERIAL shell service list
+  adb -s SERIAL shell dumpsys media.audio_policy
+  adb -s SERIAL shell dumpsys media.audio_flinger
+  adb -s SERIAL shell dumpsys audio
+  adb -s SERIAL shell dumpsys telecom
+  adb -s SERIAL shell dumpsys phone
+  adb -s SERIAL shell dumpsys package com.android.shell
+  adb -s SERIAL shell pm list packages
+  adb -s SERIAL shell settings get global adb_enabled
+  adb -s SERIAL shell settings get global development_settings_enabled
+  adb -s SERIAL shell su -c id
+
+All commands were read-only. No APK was installed, no permission was granted, no role
+was changed, and no call was placed.

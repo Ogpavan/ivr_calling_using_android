@@ -1,0 +1,19 @@
+Downlink recording test record
+=============================
+
+Destination: supplied test number (redacted)
+Consent: user confirmed remote participant consent
+Audio input: marento.mp3, 44.1 kHz mono PCM16
+
+Call reached shell telephony state: OFFHOOK (`mCallState=2`)
+PSTN interception check: `isPstnCallAudioInterceptable=true`
+Uplink/downlink track creation: failed during the 60-second readiness wait
+Observed probe result: `InvocationTargetException:null`, followed by
+`UnsupportedOperationException:Cannot create AudioTrack`
+Downlink PCM produced: no
+WAV produced: no
+Call cleanup: automatic hang-up invoked; post-test state idle (`mCallState=0`)
+Temporary device files: removed
+
+Conclusion: this run did not verify downlink recording. The firmware did not
+expose a creatable call-redirection track during this call window.

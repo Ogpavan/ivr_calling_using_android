@@ -1,0 +1,13 @@
+Read-only Telecom summary
+=========================
+
+Current mCalls: empty (no active call at inspection time)
+Default outgoing connection service:
+  com.android.phone/com.android.services.telephony.TelephonyConnectionService
+Outgoing tel-scheme account:
+  com.android.phone/com.android.services.telephony.TelephonyConnectionService
+SIM call manager: null
+In-call services included the system InCallUI and vendor/system call services.
+
+All phone numbers, account identifiers, subscriber identifiers, and other sensitive
+Telecom fields were omitted.

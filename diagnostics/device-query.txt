@@ -1,0 +1,32 @@
+Read-only device query (serial redacted in report)
+===================================================
+
+ADB state: device
+Manufacturer: vivo
+Brand: iQOO
+Model: I2403
+Product: I2403i
+Android: 16
+SDK/API: 36
+Fingerprint: iQOO/I2403i/I2403:16/BP2A.250605.031.A3/compiler261014145913:user/release-keys
+Board/platform: mt6878
+SoC: Mediatek MT6878
+CPU ABI: arm64-v8a
+Multi-SIM property: dsds
+Verified boot: green
+Bootloader lock property: 1
+ro.debuggable: 0
+Shell identity: uid=2000(shell), context=u:r:shell:s0
+Root probe: /system/bin/sh: su: inaccessible or not found
+
+USB debugging state:
+  global.adb_enabled=1
+  global.development_settings_enabled=1
+
+Telephony features included calling, GSM, IMS, radio access, subscription, and
+Android Telecom. Phone service inspection showed two radio slots; slot 0 IMS READY,
+slot 1 IMS UNAVAILABLE at collection time. Telecom had a default outgoing SIM
+connection service provided by com.android.phone. No subscriber identifiers were saved.
+
+Dialer role holder: com.android.contacts
+Shizuku package: not detected

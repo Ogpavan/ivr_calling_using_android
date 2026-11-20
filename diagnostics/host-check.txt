@@ -1,0 +1,15 @@
+Read-only host and USB check
+============================
+
+$ adb version
+Android Debug Bridge version 1.0.41
+Version 34.0.4-debian
+Installed as /usr/lib/android-sdk/platform-tools/adb
+Running on Linux 7.0.0-38-generic (x86_64)
+
+$ adb devices -l
+List of devices attached
+[serial redacted] device usb:3-1 product:I2403i model:I2403 device:I2403 transport_id:3
+
+The physical Android phone is connected and usable. All subsequent commands used the
+same selected serial. The serial itself is omitted from saved reports.

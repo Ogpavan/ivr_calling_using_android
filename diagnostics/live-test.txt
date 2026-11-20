@@ -1,0 +1,62 @@
+Authorized MP3 live test record
+===============================
+
+Destination: supplied test number (redacted)
+Calls placed in this test cycle: 1
+Call reached active/off-hook state: yes (`mCallState=2`)
+
+High-quality audio input:
+  black.mp3 decoded locally to 44.1 kHz mono PCM16
+  Source remained mono because a cellular uplink is not a stereo path
+  PCM source bytes: 2,345,326 (~26.6 seconds)
+  AudioTrack buffer: 1,888 frames (~42.8 ms at 44.1 kHz)
+  Prebuffer accepted: 3,776 bytes
+  Streaming writes: 20 ms blocking PCM chunks
+
+Pre-call/runtime API:
+  isPstnCallAudioInterceptable=true
+
+Injection:
+  AudioManager.getCallUplinkInjectionAudioTrack(): initialized AudioTrack, state=1
+  Native track start: invoked successfully
+  Digital uplink route used; no speaker/microphone fallback
+  Remote audio: user confirmed that the audio was audible and the test worked
+  Exact final accepted-byte/underrun summary: unavailable because the call route
+  closed while the probe was flushing its final output
+
+Cleanup:
+  Call ended; post-hangup mCallState=0
+  Temporary probe and PCM removed from /data/local/tmp
+  No APK installed, no root changes, and no system partition changes
+
+Conclusion: the phone demonstrated a working internal digital PSTN uplink path
+and the 44.1 kHz mono PCM test was audible remotely. Cellular codec/network
+processing can still limit the final voice-band quality; stereo or a higher
+source sample rate would not improve that uplink.
+
+Repeat test: marento.mp3
+========================
+
+Source: `marento.mp3` (26.279 seconds, 44.1 kHz mono MP3)
+Decoded locally to 44.1 kHz mono PCM16: 2,317,824 bytes
+Calls placed: 1 to the previously approved destination (redacted)
+Call reached active state: yes (`mCallState=2`)
+PSTN interception result: `true`
+Uplink AudioTrack: initialized, state=1, 44.1 kHz
+PCM accepted: 2,317,824 / 2,317,824 bytes
+Underruns: 0
+Remote playback fallback: none
+Automatic hang-up: performed immediately after playback completed
+Post-hang-up state: idle (`mCallState=0`)
+Temporary device files: removed
+
+Automatic-hang-up verification repeat
+======================================
+
+Destination: newly supplied test number (redacted)
+Source: `marento.mp3`, decoded to 44.1 kHz mono PCM16
+PCM accepted: 2,317,824 / 2,317,824 bytes
+Underruns: 0
+Probe result: `automatic_hangup_invoked=true exit_code=0`
+Post-test call state: idle (`mCallState=0`)
+Temporary device files: removed

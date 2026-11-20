@@ -1,0 +1,19 @@
+Read-only security and permission inspection
+============================================
+
+Device security properties:
+  ro.boot.verifiedbootstate=green
+  ro.boot.flash.locked=1
+  ro.debuggable=0
+  ro.secure=1
+  ro.adb.secure=1
+
+The ADB shell identity is uid 2000 and is not root. `su` is absent/inaccessible.
+
+The com.android.shell package requested and had granted entries for:
+  android.permission.CALL_AUDIO_INTERCEPTION: granted=true
+  android.permission.MODIFY_AUDIO_ROUTING: granted=true
+  android.permission.MODIFY_PHONE_STATE: granted=true
+
+This is a shell-package grant, not evidence that an ordinary installed application has
+these permissions. Shizuku is not installed, so Shizuku execution was not tested.

@@ -1,0 +1,6 @@
+probe/build/
+probe/fixtures/audio/*.pcm
+recordings/*.pcm
+recordings/*.wav
+recordings/*.m4a
+__pycache__/

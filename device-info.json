@@ -1,0 +1,103 @@
+{
+  "status": "device_detected",
+  "collected_at": "2026-11-20",
+  "adb": {
+    "selected_serial": "[REDACTED_LOCAL_SERIAL]",
+    "state": "device",
+    "usb_transport": "usb:3-1",
+    "product": "I2403i",
+    "device": "I2403"
+  },
+  "phone": {
+    "manufacturer": "vivo",
+    "brand": "iQOO",
+    "model": "I2403",
+    "android_release": "16",
+    "sdk": 36,
+    "build_fingerprint": "iQOO/I2403i/I2403:16/BP2A.250605.031.A3/compiler261014145913:user/release-keys",
+    "board_platform": "mt6878",
+    "soc_manufacturer": "Mediatek",
+    "soc_model": "MT6878",
+    "cpu_abi": "arm64-v8a",
+    "multisim_config": "dsds",
+    "firmware_baseband_present": true
+  },
+  "security": {
+    "verified_boot_state": "green",
+    "bootloader_locked": true,
+    "ro_debuggable": "0",
+    "ro_secure": "1",
+    "adb_secure": "1",
+    "shell_uid": 2000,
+    "shell_selinux_context": "u:r:shell:s0",
+    "su_probe": "su: inaccessible or not found",
+    "root_available": false
+  },
+  "telephony": {
+    "hardware_features": [
+      "android.hardware.telephony",
+      "android.hardware.telephony.calling",
+      "android.hardware.telephony.data",
+      "android.hardware.telephony.gsm",
+      "android.hardware.telephony.ims",
+      "android.hardware.telephony.radio.access",
+      "android.hardware.telephony.subscription",
+      "android.software.telecom"
+    ],
+    "two_sim_capable": true,
+    "observed_slots": 2,
+    "slot_0_ims_state": "READY",
+    "slot_1_ims_state": "UNAVAILABLE",
+    "current_call_state": "idle",
+    "default_outgoing_connection_service": "com.android.phone/com.android.services.telephony.TelephonyConnectionService"
+  },
+  "dialer": {
+    "dialer_role_holder": "com.android.contacts"
+  },
+  "shizuku": {
+    "package_detected": false
+  },
+  "live_test": {
+    "call_placed": true,
+    "call_reached_active_state": true,
+    "pstn_interceptable_runtime_result": true,
+    "uplink_track_created": true,
+    "pcm_bytes_accepted": 2552736,
+    "remote_audio_verified": true,
+    "call_hung_up": true,
+    "result": "verified_working_remote_audio_confirmed",
+    "latest_high_quality_test": {
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "encoding": "PCM_16BIT",
+      "source_pcm_bytes": 2345326,
+      "buffer_capacity_frames": 1888,
+      "prebuffer_bytes_accepted": 3776,
+      "write_mode": "WRITE_BLOCKING",
+      "chunk_duration_ms": 20,
+      "remote_audio_confirmed_by_user": true,
+      "exact_final_byte_and_underrun_counters_available": false,
+      "reason_counters_unavailable": "call route closed while probe was flushing final output"
+    },
+    "latest_marento_test": {
+      "source_file": "marento.mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "encoding": "PCM_16BIT",
+      "source_duration_seconds": 26.279125,
+      "pcm_bytes_accepted": 2317824,
+      "underrun_count": 0,
+      "remote_fallback_used": false,
+      "automatic_hangup_after_playback": true,
+      "post_hangup_call_state": "idle",
+      "automatic_hangup_verification": {
+        "probe_invoked_endcall": true,
+        "probe_exit_code": 0,
+        "post_test_call_state": "idle"
+      }
+    }
+  },
+  "privacy": {
+    "redaction": "Subscriber numbers, IMEI, IMSI, SIM identifiers, cell IDs, IP addresses, and Bluetooth addresses were excluded from reports."
+  }
+}
